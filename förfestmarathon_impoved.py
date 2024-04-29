@@ -32,7 +32,6 @@ def summary(doc, groups_starter, groups_main, groups_desert, data, i):
     guest_1 = groups_starter[i][1] - 1
     guest_2 = groups_starter[i][2] - 1
 
-    print("Förfest", group_nr, guest_1, guest_2)
 
     special_diet11 = str(data.iloc[guest_1, Spec_diet1])
     special_diet21 = str(data.iloc[guest_2, Spec_diet1])
@@ -337,7 +336,6 @@ def grouping(data):
 
 def main():
 
-    """
     # option to lock groups together, or to a specific dish etc
     initial_locked = []
 
@@ -349,7 +347,7 @@ def main():
     # Saves the optimal solution to final_optimized.xlsx if you want a overwiev of the results
     finaldata = optimizer.optimize(iterations=100)
     print("The final optimized data has been saved in:", finaldata)
-    """
+
     # Reads the optimized grouping
     df = pd.read_excel(r'final_optimized.xlsx', header=0)
 
